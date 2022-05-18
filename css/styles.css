@@ -134,7 +134,9 @@ El combinador ~ (virgulilla) separa dos selectores y selecciona el segundo eleme
 main {
 	display: block;
 }
-
+.carousel{height: 620px;
+	overflow: hidden;
+	margin-bottom: 00px;}
 
 
 .imgPaleta {
