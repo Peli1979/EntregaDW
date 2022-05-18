@@ -271,7 +271,9 @@ form input[type="submit"] {
 	background-color: #000;
 }
 
-
+.enviar:hover{filter: brightness(150%);
+	
+}
 
 
 form input[type="submit"]:hover {
@@ -291,7 +293,7 @@ textarea {
 }
 
 .reservas {
-	background-color: rgb(9, 9, 6);
+	background-image: linear-gradient(to right, black, grey);
 }
 
 /*Es un menú mobile first porque esta query sólo se aplica cuando el ancho de la pantalla es MAYOR a 768px*/
