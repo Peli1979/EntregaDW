@@ -208,7 +208,7 @@ main {
 	bottom: 00;
 	margin-top: auto;
 }
-
+.colorFooter{color:#000}
 .sobreNosotros {
 	background-color: black;
 }
@@ -388,6 +388,7 @@ textarea {
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 320px 1fr 1fr 1fr;
 	height: 100vh;
+	margin-bottom: 500px;
 }
 
 

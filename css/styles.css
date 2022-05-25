@@ -161,6 +161,9 @@ main {
   bottom: 00;
   margin-top: auto; }
 
+.colorFooter {
+  color: #000; }
+
 .sobreNosotros {
   background-color: black; }
 
@@ -281,7 +284,8 @@ textarea {
   grid-template-areas: "fotoSede fotoSede" "sede1 sede2" "sede3 sede4" "sede5 sede6";
   grid-template-columns: 50% 50%;
   grid-template-rows: 320px 1fr 1fr 1fr;
-  height: 100vh; }
+  height: 100vh;
+  margin-bottom: 500px; }
 
 .fotoSede {
   grid-area: fotoSede; }
