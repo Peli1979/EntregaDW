@@ -279,7 +279,10 @@ html {
 .sedes {
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: "fotoSede fotoSede" "sede1 sede2" "sede3 sede4" "sede5 sede6";
+  grid-template-areas: "fotoSede fotoSede"
+ "sede1 sede2"
+ "sede3 sede4"
+ "sede5 sede6";
   grid-template-columns: 50% 50%;
   grid-template-rows: 320px 1fr 1fr 1fr;
   height: 100vh;
@@ -402,7 +405,9 @@ html {
   .sedes {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas: "fotoSede fotoSede fotoSede" "sede1 sede2 sede3" "sede4 sede5 sede6";
+    grid-template-areas: "fotoSede fotoSede fotoSede"
+ "sede1 sede2 sede3"
+ "sede4 sede5 sede6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 320px 1fr 1fr;
     height: 100vh; }
@@ -426,7 +431,9 @@ html {
 .proyectos {
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: "proy1 proy2" "proy3 proy4" "proy5 proy6";
+  grid-template-areas: "proy1 proy2"
+ "proy3 proy4"
+ "proy5 proy6";
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
   height: 100vh; }
@@ -598,7 +605,8 @@ html {
   .proyectos {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas: "proy1 proy2 proy3" "proy4 proy5 proy6";
+    grid-template-areas: "proy1 proy2 proy3"
+ "proy4 proy5 proy6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100vh; }
