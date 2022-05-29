@@ -1,4 +1,6 @@
 @import "variables";
+@import "nav";
+@import "formulario";
 
 * {
 	margin: 0;
@@ -15,31 +17,28 @@
 	font-family: "Open Serif";
 }
 
-
-
-
-
-
-.main h1 {
-	font-size: 80px;
-	text-align: center;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	padding-bottom: 50px;
+main {
+	display: block;
+	color: $colorTexto
+}
+.main {
+	background-color:$negro;
+	h1 {
+		font-size: 80px;
+		text-align: center;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		padding-bottom: 50px;
+	}
+	p {
+		font-size: 18px;
+		text-align: center;
+		padding: 20px;
+		padding-bottom: 50px;
+	
+	}
 }
 
 
-.main p {
-	font-size: 18px;
-	text-align: center;
-	padding: 20px;
-	padding-bottom: 50px;
-
-}
-
-.navBackground img {
-	padding: 10px;
-	height: 80%;
-}
 
 body {
 	width: 100%;
@@ -53,88 +52,6 @@ body {
 
 html {
 	height: 100%;
-}
-
-
-.navBackground {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: black;
-	height: 120px;
-}
-
-/*Esta regla oculta la lista de items del menú en el tamaño de pantalla menor a 768px*/
-.barra-navegacion .lista-menu {
-	display: none;
-}
-
-/*El botón, en realidad, es la etiqueta (label) de una casilla de verificación (input tipo checkbox)*/
-.boton-menu {
-	box-sizing: border-box;
-	display: block;
-	color: #B9BEBA;
-	/* vh equivale a 1% de la altura de la ventana gráfica 
-    vw equivale a 1% de la anchura de la ventana gráfica*/
-	margin: 1vh;
-	height: 8vh;
-	width: 8vh;
-	border: 1px solid #B9BEBA;
-	border-radius: 5px;
-	line-height: 8vh;
-	text-align: center;
-	font-weight: bold;
-	/*Esta declaración impide que el usuario pueda seleccionar el botón, sólo se puede hacer click en él*/
-	user-select: none;
-
-}
-
-
-/*
-Esta regla cambia el comportamiento del botón (checkbox) al estar clickeado, usando pseudoclases y selectores de hermanos generales.
-El combinador ~ (virgulilla) separa dos selectores y selecciona el segundo elemento (en este caso, .boton-menu) sólo si está precedido por el primero (en este caso, input:checked) y ambos comparten un padre común (en este caso, .barra-navegacion).
-*/
-
-.barra-navegacion input:checked~.boton-menu {
-	background: #B9BEBA;
-	color: #1e2639;
-	border-color: #1e2639;
-}
-
-.barra-navegacion input:checked~.lista-menu {
-	display: block;
-	position: fixed;
-	top: 15vh;
-	right: 0;
-	background-color: #1e2639be;
-	/*Acá el hexa tiene 4 pares de valores, el último corresponde al canal alpha*/
-}
-
-/*Escondemos el checkbox en sí, pero como mantenemos visible su etiqueta (el botón), se puede seguir usando*/
-#check-menu {
-	display: none;
-}
-
-.item-menu {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 10px;
-	border-bottom: 1px solid grey;
-}
-
-/*Esta regla agrega un efecto al item cuando pasamos el mouse por encima*/
-.item-menu:hover {
-	filter: brightness(120%);
-}
-
-.item-menu a {
-	text-decoration: none;
-	color: #B9BEBA;
-}
-
-main {
-	display: block;
 }
 .carousel{height: 620px;
 	overflow: hidden;
@@ -154,29 +71,12 @@ main {
 	height: auto;
 	padding-bottom: 0px;
 }
-
-
-
-.main {
-	background-color: black;
-}
-
-main {
-	color: aliceblue
-}
-
 .predio {
 	display: flex;
 	justify-content: space-around;
 	background-color: rgb(11, 11, 11);
 	flex-wrap: wrap;
-
-
-
 }
-
-
-
 .predio img {
 	width: 50%;
 	height: auto;
@@ -208,9 +108,9 @@ main {
 	bottom: 00;
 	margin-top: auto;
 }
-
+.colorFooter{color:$negro}
 .sobreNosotros {
-	background-color: black;
+	background-color: $negro
 }
 
 .fotosSobreNosotros {
@@ -232,72 +132,8 @@ main {
 	height: auto;
 }
 
-
-
-
 * {
 	box-sizing: border-box;
-}
-
-form {
-	width: 300px;
-	padding: 16px;
-	border-radius: 10px;
-	margin: auto;
-	background-color: #ccc;
-}
-
-form label {
-	width: 250px;
-	font-weight: bold;
-	display: inline-block;
-}
-
-form input[type="text"],
-form input[type="email"] {
-	width: 180px;
-	padding: 3px 10px;
-	border: 1px solid #f6f6f6;
-	border-radius: 3px;
-	background-color: #f6f6f6;
-	margin: 8px 0;
-	display: inline-block;
-}
-
-form input[type="submit"] {
-	width: 100%;
-	padding: 8px 16px;
-	margin-top: 32px;
-	border: 1px solid #000;
-	border-radius: 5px;
-	display: block;
-	color: #fff;
-	
-}
-
-.enviar:hover{filter: brightness(150%);
-	
-}
-
-
-form input[type="submit"]:hover {
-	cursor: pointer;
-}
-
-textarea {
-	width: 100%;
-	height: 100px;
-	border: 1px solid #f6f6f6;
-	border-radius: 3px;
-	background-color: #f6f6f6;
-	margin: 8px 0;
-	/*resize: vertical | horizontal | none | both*/
-	resize: none;
-	display: block;
-}
-
-.reservas {
-	background-image: linear-gradient(to right, black, grey);
 }
 
 /*Es un menú mobile first porque esta query sólo se aplica cuando el ancho de la pantalla es MAYOR a 768px*/
@@ -322,21 +158,12 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-
-
 	.navBackground ul {
 		align-items: center;
 	}
-
-
 	header ul li a {
 		color: aliceblue;
 	}
-
-
-
-
-
 	.imgPaleta {
 		height: 60vh;
 		overflow: hidden;
@@ -348,8 +175,6 @@ textarea {
 		display: flex;
 		justify-content: space-around;
 		background-color: rgb(11, 11, 11);
-
-
 
 	}
 
@@ -369,15 +194,15 @@ textarea {
 		line-height: 1.5;
 		padding: 50px;
 	}
-
-
-
-
 }
 
 /* SEDES*/
 
-
+.bodySedes {
+	display: grid;
+	min-height: 100%;
+	background-color: $negro;
+}
 .sedes {
 	box-sizing: border-box;
 	display: grid;
@@ -388,222 +213,145 @@ textarea {
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 320px 1fr 1fr 1fr;
 	height: 100vh;
-}
+	margin-bottom: 700px;
+	.fotoSede {
+		grid-area: fotoSede;
+		height: 320px;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 200px;
+		position: relative;
+		display: inline-block;
+    	text-align: center;
+	}
+		.textoSede{position: absolute;
+		top: 50%;
+		left: 45%;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size: 50px;
+		font-weight: bold;
+		color:#fff;
+		font-style: oblique;
+	}
+		.imagenSede {
+		width: 100%;
+		filter: brightness(0.3);
+	}
+	.sede1 {
+		grid-area: sede1;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 100px;
+		margin-bottom: 50px;
+		margin-left: 50px;
+		display: block;
+		h2 {
+			vertical-align: bottom;
+			color: white;
+		}
 
+		.imgSede1 {
+			width: 40vh;
+			height: 80%;
+			justify-content: center;
+		}
+	}
+	.sede2 {
+		grid-area: sede2;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
+		margin-top: 100px;
+		margin-left: 50px;
+		.imgSede2 {
+			width: 40vh;
+			height: 80%;
+			justify-content: center;
+		}
+		h2 {
+			vertical-align: bottom;
+			color: aliceblue;
+		}
+	}
+	.sede3 {
+		grid-area: sede3;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 30px;
+		margin-bottom: 100px;
+		margin-left: 50px;
+		.imgSede3 {
+			width: 40vh;
+			height: 80%;
+			justify-content: center;
+		}
 
-.fotoSede {
-	grid-area: fotoSede;
-}
-
-.sede1 {
-	grid-area: sede1;
-}
-
-
-
-.sede2 {
-	grid-area: sede2;
-}
-
-
-
-
-.sede3 {
-	grid-area: sede3;
-}
-
-.sede4 {
-	grid-area: sede4;
-}
-
-.sede5 {
-	grid-area: sede5;
-}
-
-.sede6 {
-	grid-area: sede6;
-}
-
-
-/*column-gap: 10px;
-    row-gap: 15px;*/
-
-
-.fotoSede {
-	height: 320px;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 200px;
-
-}
-.fotoSede{position: relative;
-	display: inline-block;
-    text-align: center;}
-
-.textoSede{position: absolute;
-    top: 50%;
-    left: 45%;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: 50px;
-	font-weight: bold;
-	color:#fff;
-	font-style: oblique;
+		h2 {
+		vertical-align: bottom;
+		color: aliceblue;}
+		
 	
+	}
+	.sede4 {
+		grid-area: sede4;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
+		margin-top: 30px;
+		margin-left: 50px;
+		h2 {
+		vertical-align: bottom;
+		color: aliceblue;
+	}
+		.imgSede4 {
+		width: 40vh;
+		height: 80%;
+		justify-content: center;
+	}
+	}
+	.sede5 {
+		grid-area: sede5;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		margin-left: 50px;
+		h2 {
+		vertical-align: bottom;
+		color: aliceblue;
+		}
+		.imgSede5 {
+			width: 40vh;
+			height: 80%;
+			justify-content: center;
+		}
+	}
+	.sede6 {
+		grid-area: sede6;
+		height: 220px;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
+		margin-top: 30px;
+		background-color: #000;
+		margin-left: 50px;
+		.imgSede6 {
+			width: 40vh;
+			height: 80%;
+			justify-content: center;
+		}
+		h2 {
+			vertical-align: bottom;
+			color: aliceblue;
+		}
+	}
 	
 }
-
-
-.imagenSede {
-	width: 100%;
-	margin-bottom: 100px;
-	filter: brightness(0.3);
-}
-
-
-
-.sede1 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-top: 100px;
-	margin-bottom: 20px;
-	background-color: #000;
-	margin-left: 20px;
-	display: block;
-
-
-}
-
-.imgSede1 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede1 h2 {
-	vertical-align: bottom;
-	color: white;
-}
-
-
-
-
-
-
-.sede2 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 50px;
-	margin-top: 100px;
-	background-color: #000;
-	margin-left: 50px;
-}
-
-.imgSede2 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede2 h2 {
-	vertical-align: bottom;
-	color: aliceblue;
-}
-
-.sede3 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	background-color: #000;
-	margin-left: 20px;
-}
-
-.imgSede3 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede3 h2 {
-	vertical-align: bottom;
-	color: aliceblue;
-}
-
-.sede4 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 50px;
-	margin-top: 30px;
-	background-color: #000;
-	margin-left: 50px;
-}
-
-.imgSede4 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede4 h2 {
-	vertical-align: bottom;
-	color: aliceblue;
-}
-
-.sede5 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	background-color: #000;
-	margin-left: 20px;
-}
-
-.sede5 h2 {
-	vertical-align: bottom;
-	color: aliceblue;
-}
-
-.imgSede5 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede6 {
-	height: 220px;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 50px;
-	margin-top: 30px;
-	background-color: #000;
-	margin-left: 50px;
-}
-
-.imgSede6 {
-	width: 40vh;
-	height: 80%;
-	justify-content: center;
-}
-
-.sede6 h2 {
-	vertical-align: bottom;
-	color: aliceblue;
-}
-
-
-.bodySedes {
-	display: grid;
-	min-height: 100%;
-	background-color: #000;
-}
-
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -617,15 +365,16 @@ textarea {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 320px 1fr 1fr;
 		height: 100vh;
+		.sede3 {
+			margin-top: 100px;
+			margin-left: 50px;
+		}
 	}
 
-	.sede3 {
-		margin-top: 100px;
-		margin-left: 50px;
-	}
+	
 
 	.sede1 {
-		margin-left: 50px;
+		margin-left: 100px;
 	}
 
 	.sede5 {
@@ -640,14 +389,11 @@ textarea {
 	height: 600px;
 	width: 100%;
 	overflow: hidden;
-
 }
 
 .bodyConst {
-	background-color: #000;
+	background-color:$negro;
 }
-
-
 .proyectos {
 	box-sizing: border-box;
 	display: grid;
@@ -674,10 +420,6 @@ display: flex;}
 	font-weight: bold;
 	color:#fff;
 	font-style: oblique;
-	
-	
-	
-	
 }
 
 .mejores{margin-top: 50px;
@@ -688,9 +430,6 @@ text-decoration: underline;}
 .proy1 {
 	grid-area: proy1;
 }
-
-
-
 .proy2 {
 	grid-area: proy2;
 }
@@ -720,10 +459,7 @@ text-decoration: underline;}
 	background-color: #000;
 	margin-left: 20px;
 	display: block;
-
-
 }
-
 .imgProy1 {
 	width: 40vh;
 	height: 80%;
@@ -734,11 +470,6 @@ text-decoration: underline;}
 	vertical-align: bottom;
 	color: white;
 }
-
-
-
-
-
 
 .proy2 {
 	height: 220px;
@@ -859,9 +590,6 @@ text-decoration: underline;}
 .abajo{
 	
 	margin-top: 500px;}
-
-
-
 
 @media screen and (min-width: 768px) {
 

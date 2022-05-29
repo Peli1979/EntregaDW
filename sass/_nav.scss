@@ -1,0 +1,75 @@
+.navBackground {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color:$negro;
+	height: 120px;
+    img {
+        padding: 10px;
+        height: 80%;}
+}
+
+/*Esta regla oculta la lista de items del menú en el tamaño de pantalla menor a 768px*/
+.barra-navegacion .lista-menu {
+	display: none;
+}
+
+/*El botón, en realidad, es la etiqueta (label) de una casilla de verificación (input tipo checkbox)*/
+.boton-menu {
+	box-sizing: border-box;
+	display: block;
+	color: #B9BEBA;
+	/* vh equivale a 1% de la altura de la ventana gráfica 
+    vw equivale a 1% de la anchura de la ventana gráfica*/
+	margin: 1vh;
+	height: 8vh;
+	width: 8vh;
+	border: 1px solid #B9BEBA;
+	border-radius: 5px;
+	line-height: 8vh;
+	text-align: center;
+	font-weight: bold;
+	/*Esta declaración impide que el usuario pueda seleccionar el botón, sólo se puede hacer click en él*/
+	user-select: none;
+
+}
+
+
+/*
+Esta regla cambia el comportamiento del botón (checkbox) al estar clickeado, usando pseudoclases y selectores de hermanos generales.
+El combinador ~ (virgulilla) separa dos selectores y selecciona el segundo elemento (en este caso, .boton-menu) sólo si está precedido por el primero (en este caso, input:checked) y ambos comparten un padre común (en este caso, .barra-navegacion).
+*/
+
+.barra-navegacion input:checked~.boton-menu {
+	background: #B9BEBA;
+	color: #1e2639;
+	border-color: #1e2639;
+}
+
+.barra-navegacion input:checked~.lista-menu {
+	display: block;
+	position: fixed;
+	top: 15vh;
+	right: 0;
+	background-color: #1e2639be;
+	/*Acá el hexa tiene 4 pares de valores, el último corresponde al canal alpha*/
+}
+
+/*Escondemos el checkbox en sí, pero como mantenemos visible su etiqueta (el botón), se puede seguir usando*/
+#check-menu {
+	display: none;
+}
+
+.item-menu {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+	border-bottom: 1px solid grey;
+	&hover {
+		filter: brightness(120%)}
+}
+.item-menu a {
+	text-decoration: none;
+	color: #B9BEBA;
+}
