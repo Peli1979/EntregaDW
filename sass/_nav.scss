@@ -1,8 +1,14 @@
+
+
+@function color($color-name){
+	@return map-get($colors, $color-name)
+}
+
 .navBackground {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color:$negro;
+	background-color:color(negro);
 	height: 120px;
     img {
         padding: 10px;
@@ -51,6 +57,9 @@ El combinador ~ (virgulilla) separa dos selectores y selecciona el segundo eleme
 	position: fixed;
 	top: 15vh;
 	right: 0;
+	z-index: 4;
+	width: 100vw;
+	left: 0;
 	background-color: #1e2639be;
 	/*Acá el hexa tiene 4 pares de valores, el último corresponde al canal alpha*/
 }

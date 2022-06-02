@@ -1,2 +1,10 @@
 $negro:#000;
 $colorTexto: #f0f8ff;
+
+$colors:(negro:#000, gris:grey, blanco: #fff);
+
+@mixin imgSedes {
+    width: 40vh;
+	height: 80%;
+	justify-content: center;
+}

@@ -45,6 +45,9 @@ El combinador ~ (virgulilla) separa dos selectores y selecciona el segundo eleme
   position: fixed;
   top: 15vh;
   right: 0;
+  z-index: 4;
+  width: 100vw;
+  left: 0;
   background-color: #1e2639be;
   /*Acá el hexa tiene 4 pares de valores, el último corresponde al canal alpha*/ }
 
@@ -130,7 +133,7 @@ textarea {
 
 main {
   display: block;
-  color: #f0f8ff; }
+  color: #fff; }
 
 .main {
   background-color: #000; }
@@ -214,15 +217,7 @@ html {
 .fotosSobreNosotros {
   display: flex; }
 
-.sn1 {
-  max-width: 33%;
-  height: auto; }
-
-.sn2 {
-  max-width: 33%;
-  height: auto; }
-
-.sn3 {
+.sn1, .sn2, .sn3 {
   max-width: 33%;
   height: auto; }
 
@@ -279,10 +274,7 @@ html {
 .sedes {
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: "fotoSede fotoSede"
- "sede1 sede2"
- "sede3 sede4"
- "sede5 sede6";
+  grid-template-areas: "fotoSede fotoSede" "sede1 sede2" "sede3 sede4" "sede5 sede6";
   grid-template-columns: 50% 50%;
   grid-template-rows: 320px 1fr 1fr 1fr;
   height: 100vh;
@@ -405,9 +397,7 @@ html {
   .sedes {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas: "fotoSede fotoSede fotoSede"
- "sede1 sede2 sede3"
- "sede4 sede5 sede6";
+    grid-template-areas: "fotoSede fotoSede fotoSede" "sede1 sede2 sede3" "sede4 sede5 sede6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 320px 1fr 1fr;
     height: 100vh; }
@@ -431,9 +421,7 @@ html {
 .proyectos {
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: "proy1 proy2"
- "proy3 proy4"
- "proy5 proy6";
+  grid-template-areas: "proy1 proy2" "proy3 proy4" "proy5 proy6";
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
   height: 100vh; }
@@ -605,8 +593,7 @@ html {
   .proyectos {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas: "proy1 proy2 proy3"
- "proy4 proy5 proy6";
+    grid-template-areas: "proy1 proy2 proy3" "proy4 proy5 proy6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100vh; }

@@ -2,6 +2,11 @@
 @import "nav";
 @import "formulario";
 
+
+@function color($color-name){
+	@return map-get($colors, $color-name)
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,10 +24,10 @@
 
 main {
 	display: block;
-	color: $colorTexto
+	color: color(blanco)
 }
 .main {
-	background-color:$negro;
+	background-color:color(negro);
 	h1 {
 		font-size: 80px;
 		text-align: center;
@@ -123,13 +128,11 @@ html {
 }
 
 .sn2 {
-	max-width: 33%;
-	height: auto;
+	@extend .sn1;
 }
 
 .sn3 {
-	max-width: 33%;
-	height: auto;
+	@extend .sn1;
 }
 
 * {
@@ -252,9 +255,7 @@ html {
 		}
 
 		.imgSede1 {
-			width: 40vh;
-			height: 80%;
-			justify-content: center;
+			@include imgSedes;
 		}
 	}
 	.sede2 {
@@ -266,9 +267,7 @@ html {
 		margin-top: 100px;
 		margin-left: 50px;
 		.imgSede2 {
-			width: 40vh;
-			height: 80%;
-			justify-content: center;
+			@include imgSedes;
 		}
 		h2 {
 			vertical-align: bottom;
@@ -284,9 +283,7 @@ html {
 		margin-bottom: 100px;
 		margin-left: 50px;
 		.imgSede3 {
-			width: 40vh;
-			height: 80%;
-			justify-content: center;
+			@include imgSedes;
 		}
 
 		h2 {
@@ -308,9 +305,7 @@ html {
 		color: aliceblue;
 	}
 		.imgSede4 {
-		width: 40vh;
-		height: 80%;
-		justify-content: center;
+			@include imgSedes;
 	}
 	}
 	.sede5 {
@@ -326,9 +321,7 @@ html {
 		color: aliceblue;
 		}
 		.imgSede5 {
-			width: 40vh;
-			height: 80%;
-			justify-content: center;
+			@include imgSedes;
 		}
 	}
 	.sede6 {
@@ -341,9 +334,7 @@ html {
 		background-color: #000;
 		margin-left: 50px;
 		.imgSede6 {
-			width: 40vh;
-			height: 80%;
-			justify-content: center;
+			@include imgSedes;
 		}
 		h2 {
 			vertical-align: bottom;
