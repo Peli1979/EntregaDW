@@ -159,12 +159,23 @@ html {
   height: 100%; }
 
 .carousel {
-  height: 620px;
   overflow: hidden;
   margin-bottom: 00px; }
 
+.carousel-inner {
+  height: 570px; }
+
+.carousel-item img {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 500px; }
+
 .imgPaleta {
-  height: 320px;
+  height: auto;
   overflow: hidden;
   margin-bottom: 00px; }
 
@@ -185,7 +196,7 @@ html {
   height: auto; }
 
 .predio p {
-  width: 50%;
+  width: 50vw;
   height: auto;
   vertical-align: middle;
   text-align: center;
@@ -228,6 +239,18 @@ html {
 @media screen and (min-width: 768px) {
   .boton-menu {
     display: none; }
+  .carousel {
+    height: 620px; }
+  .carousel-inner {
+    height: 570px; }
+  .carousel-item img {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 750px; }
   .barra-navegacion .lista-menu {
     display: block; }
   .item-menu {
@@ -244,7 +267,7 @@ html {
   header ul li a {
     color: aliceblue; }
   .imgPaleta {
-    height: 60vh;
+    height: auto;
     overflow: hidden;
     margin-bottom: 00px; }
   .predio {
